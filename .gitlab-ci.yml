@@ -4,7 +4,7 @@ stages:
   - rm
 
 variables:
-  IMG_NAME: sdk-enclustra
+  IMG_NAME: sdk-ultra96
   REG_HOST: docker-registry:443/embedded
   SDK_ULTRA96_DIR: /locod/docker/petalinux-sdk/ultra96
 

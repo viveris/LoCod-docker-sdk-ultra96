@@ -15,6 +15,7 @@ RUN	apt update && \
 
 # Copy SDK to docker
 COPY sdk-ultra96.sh /
+RUN chmod 777 sdk-ultra96.sh
 
 
 # Install SDK
@@ -23,5 +24,7 @@ RUN 	mkdir /opt/petalinux-sdk && \
 	rm -rf sdk-ultra96.sh
 
 
-# Change workdir
-WORKDIR /root
+# Workdir
+RUN mkdir /workdir
+RUN chmod -R 777 /workdir
+WORKDIR /workdir
